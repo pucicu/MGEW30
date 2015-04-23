@@ -26,6 +26,12 @@ else
     y = 1;
 end
 
+%% Prüfe Wert von y
+if y == 0
+   warn('Skalierungsfaktor ist 0. Mittelwert wird auch 0!')
+end
+
+
 %% Dimension x
 % N = Anzahl Zeilen, M = Anzahl Spalten
 [N M] = size(x);
