@@ -1,2 +1,2 @@
-utuzetwuz
+function test(x)
 
