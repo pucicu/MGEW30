@@ -6,7 +6,7 @@
 % Some first settings.
 clear
 randn('seed',1); % reset the random number generator to ensure reproducable random numbers
-N = 1000; % length of the time series
+N = 10000; % length of the time series
 x = zeros(N,1); % initialize vector with N times the value of zero
 y = zeros(N,1); % initialize vector with N times the value of zero
 rX = randn(N,1); % create random numbers from Gaussian distribution
