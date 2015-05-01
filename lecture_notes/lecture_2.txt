@@ -1,0 +1,148 @@
+## 
+# Collaborative work
+
+## Redmine
+# http://demo.redmine.org/projects/mgew30/
+
+
+## GIT
+# http://rogerdudler.github.io/git-guide/index.de.html
+
+# create a new, local git repo
+mkdir localDir
+cd localDir
+
+# this command creates the initial git repo
+git init
+
+ls -la
+
+# now prepare some file
+vi test.m
+
+# and add to index
+git add test.m
+
+# not yet in the git repo
+git status
+
+# commit to the git repo
+git commit
+
+# or with some comment
+git commit -m "initial commit"
+
+# now change the file and check git status
+git status
+
+# make changes reverse (changes will be deleted)
+git checkout test.m
+
+# add changes to the repo
+git add test.m
+git commit -m "some changes"
+
+# see the changes in the repo
+git log
+
+
+
+
+## git from GitHub
+# (use existing one or create a new one there)
+# clone repo
+git clone https://github.com/pucicu/MGEW30-1
+
+# now prepare some file
+vi test.m
+
+# and add to index
+git add test.m
+
+# not yet in the git repo
+git status
+
+# commit with comment
+git commit -m "initial commit"
+
+
+## about comments:
+# something similar to a lab-book
+# maintain git commits from the beginning of a project to the end
+# use helpful information: purpose (e.g., data preparation, data preprocessing,
+#                          analysis, modelling, reporting, archiving)
+#                          content (results, scripts)
+
+
+
+# now change the file and check git status
+git status
+
+# make changes reverse (changes will be deleted)
+git checkout test.m
+
+# add changes to the repo
+git add test.m
+# or
+git add -u
+git commit -m "some changes"
+
+# see the changes in the repo
+git log
+
+# transfer changes to the server
+git push
+
+
+
+## publish an EXISTING local git repo on GitHub or Bitbucket
+# first create a GitHub repo, e.g., "test"
+git push --mirror https://github.com/pucicu/test.git
+git push --mirror https://bitbucket.org/pucicu/test	
+
+# then remove old directory and clone from git server
+git clone https://bitbucket.org/pucicu/test
+
+## Alternative: merge local repo with external repo
+git remote add origin https://bitbucket.org/pucicu/test
+git pull origin master
+
+
+
+
+## get latest version from git server
+git pull
+
+
+## git branching
+git checkout -b name_branch
+
+# or of existing branch
+git checkout name_branch
+git push origin name_branch
+
+# change back
+git checkout master
+
+# show diffs
+git diff name_branch
+
+# merge
+git merge name_branch
+
+
+## tagging
+git tag 0.1 bada592bb891a49e10071450b7bd9833d30b4b94
+git push --tags
+
+git tag
+git show TAG_ID
+
+# checkout an older version using tags
+git checkout "TAG_ID"
+
+## git with Matlab!
+
+## publishing M-files
+
+
